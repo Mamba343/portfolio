@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Page not found · Ali Mohammed Abedi Syed</title>
+  <meta name="description" content="The page you&rsquo;re looking for doesn&rsquo;t exist.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="/">Skip to homepage</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">A</span>
+        <span>Ali Syed</span>
+      </a>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-list" id="site-nav">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="not-found">
+      <div class="container">
+        <h1>404</h1>
+        <p>This page doesn&rsquo;t exist. Head back to the <a href="/">homepage</a>, or browse <a href="/projects.html">projects</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; <span id="year"></span> Ali Mohammed Abedi Syed.</p>
+        <ul class="footer-links">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

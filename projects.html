@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Ali Mohammed Abedi Syed</title>
+  <meta name="description" content="Curated portfolio of embedded systems, IoT, and software projects by Ali Mohammed Abedi Syed: PetFeeder, Todo-List, SwitchBot, EchoSense.">
+  <link rel="canonical" href="https://mamba343.github.io/portfolio/projects.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Projects — Ali Mohammed Abedi Syed">
+  <meta property="og:description" content="Embedded systems, IoT, and software projects portfolio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mamba343.github.io/portfolio/projects.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">A</span>
+        <span>Ali Syed</span>
+      </a>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-list" id="site-nav">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html" aria-current="page">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section>
+      <div class="container">
+        <h1>Projects</h1>
+        <p>A curated selection of embedded systems, IoT, and software projects &mdash; from shipping products to ongoing research. Each entry notes its status so you can tell what is complete, active, or exploratory.</p>
+
+        <div class="grid grid--projects">
+          <article class="card card--project">
+            <div class="status-tag status-tag--ongoing">Ongoing</div>
+            <h3>Smart PetFeeder v2</h3>
+            <p>ESP32-based smart pet feeder enabling remote pet feeding through Firebase-connected mobile applications with real-time command execution. The mobile app is being rebuilt in React Native (Expo); Firebase and device integration are in progress. The servo-driven auger feeding mechanism is under evaluation in Fusion 360.</p>
+            <div class="project-meta">
+              <span>ESP32 · Firebase RTDB</span><span>React Native (Expo)</span><span>FlutterFlow · Fusion 360</span><span>Ongoing</span>
+            </div>
+            <div class="project-links">
+              <a href="/projects/petfeeder-v2.html" class="btn btn--accent btn--small">Case study</a>
+              <a href="https://github.com/Mamba343/PetFeeder" class="btn btn--ghost btn--small">Source</a>
+            </div>
+          </article>
+
+          <article class="card card--project">
+            <div class="status-tag status-tag--done">Shipped</div>
+            <h3>Todo List — Task Management Website</h3>
+            <p>Full-stack task management application supporting task creation, status tracking, and real-time updates using React, Vite, and Supabase. Live on Vercel.</p>
+            <div class="project-meta">
+              <span>React · Vite</span><span>Supabase</span><span>JavaScript</span><span>2024</span>
+            </div>
+            <div class="project-links">
+              <a href="https://todo-list-zeta-orpin-51.vercel.app/" class="btn btn--accent btn--small">Live demo</a>
+              <a href="https://github.com/Mamba343/Todo-List" class="btn btn--ghost btn--small">Source</a>
+            </div>
+          </article>
+
+          <article class="card card--project">
+            <div class="status-tag status-tag--done">Prototype</div>
+            <h3>SwitchBot Prototype</h3>
+            <p>Bluetooth-controlled actuator for automation of household switches. Enhanced from Arduino Pro Mini to ESP32-C3, using a servo mechanism and a 3D-printed enclosure.</p>
+            <div class="project-meta">
+              <span>Arduino Pro Mini · ESP32-C3</span><span>Bluetooth · Servo</span><span>3D-printed enclosure</span><span>2023</span>
+            </div>
+            <div class="project-links">
+              <a href="/projects/switchbot.html" class="btn btn--accent btn--small">Case study</a>
+              <a href="https://github.com/Mamba343/Switchbot" class="btn btn--ghost btn--small">Source</a>
+            </div>
+          </article>
+
+          <article class="card card--project">
+            <div class="status-tag status-tag--done">Completed</div>
+            <h3>PetFeeder v1</h3>
+            <p>Smart pet feeder featuring automated dispensing, RTC scheduling, and a custom 3D-printed enclosure. Presented at Emerson Noida&rsquo;s Young Innovators Program.</p>
+            <div class="project-meta">
+              <span>Arduino Nano · RTC</span><span>Continuous servo</span><span>3D-printed enclosure</span><span>2022</span>
+            </div>
+            <div class="project-links">
+              <a href="/projects/petfeeder-v1.html" class="btn btn--accent btn--small">Case study</a>
+              <a href="https://github.com/Mamba343/PetFeeder" class="btn btn--ghost btn--small">Source</a>
+            </div>
+          </article>
+
+          <article class="card card--project">
+            <div class="status-tag status-tag--done">Research</div>
+            <h3>EchoSense — Wi-Fi CSI Sensing</h3>
+            <p>Open-source, local-first Wi-Fi sensing project for room-level motion and occupancy detection using ESP32 Channel State Information (CSI). Clean-room implementation; no cameras, cloud inference, or identity tracking.</p>
+            <div class="project-meta">
+              <span>ESP32 NodeMCU-32</span><span>CSI · Python · UDP</span><span>Local-first</span><span>Active research</span>
+            </div>
+            <div class="project-links">
+              <a href="/projects/echosense.html" class="btn btn--accent btn--small">Case study</a>
+              <a href="https://github.com/Mamba343/EchoSense" class="btn btn--ghost btn--small">Source</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="text-center small text-muted" style="margin-top:var(--space-8);">All project links point to public GitHub repositories. Live demos are included only where a publicly accessible deployment has been verified.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; <span id="year"></span> Ali Mohammed Abedi Syed.</p>
+        <ul class="footer-links">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html" aria-current="page">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

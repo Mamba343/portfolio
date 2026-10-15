@@ -1,0 +1,35 @@
+# Portfolio static site — .gitignore
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Lighthouse / QA generated (keep audit/ source docs, exclude raw JSON outputs if desired)
+# Raw Lighthouse JSON and screenshot artifacts are reproducible; keep only QA_SUMMARY.md in git.
+audit/reports/*.json
+audit/screenshots/*.png
+
+# Hermes attachments (resume PDF — sensitive, not for public release)
+.hermes/desktop-attachments/

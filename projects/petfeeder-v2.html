@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart PetFeeder v2 — Case study · Ali Mohammed Abedi Syed</title>
+  <meta name="description" content="Case study: Smart PetFeeder v2 — ESP32-based smart pet feeder with Firebase-connected mobile app and real-time remote feeding.">
+  <link rel="canonical" href="https://mamba343.github.io/portfolio/projects/petfeeder-v2.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Smart PetFeeder v2 — Case study">
+  <meta property="og:description" content="ESP32-based smart pet feeder with Firebase-connected mobile app and real-time remote feeding.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mamba343.github.io/portfolio/projects/petfeeder-v2.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">A</span>
+        <span>Ali Syed</span>
+      </a>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-list" id="site-nav">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero">
+      <div class="container">
+        <div class="status-tag status-tag--ongoing" style="margin-bottom:var(--space-4);">Ongoing</div>
+        <h1>Smart PetFeeder v2</h1>
+        <p style="color:var(--color-text-secondary); max-width:48ch;">ESP32-based smart pet feeder enabling remote pet feeding through Firebase-connected mobile applications with real-time command execution.</p>
+        <div class="project-meta">
+          <span>ESP32 · Firebase RTDB</span><span>React Native (Expo)</span><span>FlutterFlow · Fusion 360</span><span>Status: Ongoing</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container project-content">
+      <h2>Problem</h2>
+      <p>Pet owners need a reliable way to feed pets remotely and on schedule. Existing solutions are often closed, expensive, or lack real-time feedback on whether a feeding actually occurred.</p>
+
+      <h2>Design decisions</h2>
+      <ul>
+        <li><strong>ESP32 + servo-driven auger</strong> for physical dispensing &mdash; the auger mechanism is evaluated in Fusion 360 before hardware commitment.</li>
+        <li><strong>Firebase Realtime Database</strong> as the bridge between mobile app and firmware, enabling real-time command execution without constant device polling.</li>
+        <li><strong>React Native (Expo) rebuild</strong> &mdash; moving from FlutterFlow to Expo for a more maintainable, code-first mobile app with improved UI.</li>
+        <li><strong>Secrets kept out of source control</strong> &mdash; Firebase credentials live in a gitignored <code>Secrets.h</code>.</li>
+      </ul>
+
+      <h2>Implementation</h2>
+      <ul>
+        <li>ESP32 Arduino firmware connects to WiFi and Firebase RTDB, reads feed commands, and drives an SG90 servo to dispense food.</li>
+        <li>Initial FlutterFlow app achieved end-to-end functionality; the Expo rebuild is in progress with Firebase and device integration.</li>
+        <li>Firmware currently uses polling (planned: streaming) and blocking <code>delay()</code> (planned: non-blocking state machine).</li>
+      </ul>
+
+      <h2>Technologies</h2>
+      <div class="project-meta" style="margin-bottom:var(--space-6);">
+        <span>ESP32</span><span>Firebase Realtime Database</span><span>React Native (Expo)</span><span>FlutterFlow</span><span>Fusion 360</span><span>Arduino IDE</span>
+      </div>
+
+      <h2>Outcomes &amp; status</h2>
+      <p><strong>Ongoing work &mdash; not yet complete.</strong> The firmware sketches connect to WiFi and Firebase RTDB and drive a servo, but the Expo app does not yet read or write live Firebase data. Firmware and app database schemas do not currently match. A status LED is planned.</p>
+
+      <div class="project-links">
+        <a href="https://github.com/Mamba343/PetFeeder" class="btn btn--accent">Source code on GitHub</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; <span id="year"></span> Ali Mohammed Abedi Syed.</p>
+        <ul class="footer-links">
+          <li><a href="/">Work</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
